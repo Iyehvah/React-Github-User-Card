@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import DisplayUsers from './Components/DisplayUsers';
+import DisplayFollowers from './Components/DisplayFollowers';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  text-align: center;
+`;
 
 class App extends Component{
 constructor() {
@@ -33,10 +38,10 @@ componentDidMount(){
 
   render() {
     return (
-      <>
+      <Container>
       <h1>GitHub Usercards!</h1>
-      <DisplayUsers users={this.state.users} user={this.state.user} />
-      </>
+      <DisplayFollowers users={this.state.users} user={this.state.user} />
+      </Container>
     )
   }
 }
